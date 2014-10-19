@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url 'http://oss.sonatype.org/content/repositories/snapshots' }
+        jcenter()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:0.1-SNAPSHOT",
+					"org.jetbrains.kotlin:kotlin-js-library:0.1-SNAPSHOT"
+    }
+}
+
+apply plugin: 'kotlin-javascript'
+
+repositories {
+    mavenLocal()
+    maven { url 'http://oss.sonatype.org/content/repositories/snapshots' }
+    jcenter()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-js-library:0.1-SNAPSHOT"
+}
+
+compileKotlinJavascript.kotlinOptions.outputFile = "${projectDir}/web/js/app.js"
+compileKotlinJavascript.kotlinOptions.suppressWarnings = true
+compileKotlinJavascript.kotlinOptions.verbose = true
+
+copyKotlinJs.into "${projectDir}/web/js/lib"
