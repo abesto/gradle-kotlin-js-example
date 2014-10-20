@@ -11,7 +11,7 @@ buildscript {
     }
 }
 
-apply plugin: 'kotlin-javascript'
+apply plugin: 'kotlin2js'
 
 repositories {
     mavenLocal()
@@ -23,8 +23,8 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-js-library:0.1-SNAPSHOT"
 }
 
-compileKotlinJavascript.kotlinOptions.outputFile = "${projectDir}/web/js/app.js"
-compileKotlinJavascript.kotlinOptions.suppressWarnings = true
-compileKotlinJavascript.kotlinOptions.verbose = true
+compileKotlin2Js.kotlinOptions.outputFile = "${projectDir}/web/js/app.js"
+compileKotlin2Js.kotlinOptions.suppressWarnings = true
+compileKotlin2Js.kotlinOptions.verbose = true
 
 copyKotlinJs.into "${projectDir}/web/js/lib"
