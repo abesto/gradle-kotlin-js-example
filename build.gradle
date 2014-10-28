@@ -25,5 +25,7 @@ dependencies {
 compileKotlin2Js.kotlinOptions.outputFile = "${projectDir}/web/js/app.js"
 compileKotlin2Js.kotlinOptions.suppressWarnings = true
 compileKotlin2Js.kotlinOptions.verbose = true
+compileKotlin2Js.kotlinOptions.version = true
+compileKotlin2Js.kotlinOptions.sourceMap = true
 
 copyKotlinJs.into "${projectDir}/web/js/lib"
