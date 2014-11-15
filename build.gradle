@@ -18,13 +18,9 @@ repositories {
     jcenter()
 }
 
-dependencies {
-    compile "org.jetbrains.kotlin:kotlin-js-library:0.1-SNAPSHOT"
-}
-
 compileKotlin2Js.kotlinOptions.outputFile = "${projectDir}/web/js/app.js"
 compileKotlin2Js.kotlinOptions.suppressWarnings = true
-compileKotlin2Js.kotlinOptions.verbose = true
+compileKotlin2Js.kotlinOptions.verbose = false
 compileKotlin2Js.kotlinOptions.version = true
 compileKotlin2Js.kotlinOptions.sourceMap = true
 
